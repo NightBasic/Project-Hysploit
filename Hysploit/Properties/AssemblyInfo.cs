@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Project Hysploit")]
+[assembly: AssemblyTitle("Project Hysploit Open Text Build")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Project Hysploit")]
-[assembly: AssemblyCopyright("Copyright ©  2019 Neko Hynix")]
+[assembly: AssemblyProduct("Project Hysploit Open Text Build")]
+[assembly: AssemblyCopyright("Copyright ©  2019-2020 Neko Yutsu")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.2.1")]
-[assembly: AssemblyFileVersion("0.1.2.1")]
+[assembly: AssemblyVersion("0.0.0.01")]
+[assembly: AssemblyFileVersion("0.0.0.01")]
