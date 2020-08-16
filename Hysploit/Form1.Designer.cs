@@ -52,6 +52,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -284,7 +285,7 @@
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(685, 121);
+            this.button5.Location = new System.Drawing.Point(685, 161);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(118, 34);
             this.button5.TabIndex = 18;
@@ -297,7 +298,7 @@
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(686, 161);
+            this.button6.Location = new System.Drawing.Point(685, 201);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(118, 34);
             this.button6.TabIndex = 19;
@@ -330,12 +331,26 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
+            // button8
+            // 
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(685, 121);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(118, 34);
+            this.button8.TabIndex = 22;
+            this.button8.Text = "Change Log";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(815, 383);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button6);
@@ -393,6 +408,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 

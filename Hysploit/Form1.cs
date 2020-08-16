@@ -143,5 +143,10 @@ namespace Exploit_Template_with_WRDAPI
         {
             System.Diagnostics.Process.Start("https://pastebin.com/raw/M3tVuYxs");
         }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://pastebin.com/M3tVuYxs");
+        }
     }
 }
