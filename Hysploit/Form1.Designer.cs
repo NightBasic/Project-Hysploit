@@ -31,13 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.inputScript = new System.Windows.Forms.RichTextBox();
             this.btnExecute = new System.Windows.Forms.Button();
             this.btnInject = new System.Windows.Forms.Button();
             this.btnBtools = new System.Windows.Forms.Button();
-            this.inputTPTo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnTPTo = new System.Windows.Forms.Button();
             this.btnSpeed = new System.Windows.Forms.Button();
             this.txtIsInjected = new System.Windows.Forms.Label();
             this.InjectedChecker = new System.Windows.Forms.Timer(this.components);
@@ -54,6 +50,12 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.fastColoredTextBox1 = new FastColoredTextBoxNS.FastColoredTextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button12 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,18 +69,6 @@
             this.label1.Size = new System.Drawing.Size(290, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "PROJECT HYSPLOIT";
-            // 
-            // inputScript
-            // 
-            this.inputScript.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.inputScript.Font = new System.Drawing.Font("Arial", 9.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputScript.ForeColor = System.Drawing.SystemColors.Window;
-            this.inputScript.Location = new System.Drawing.Point(10, 80);
-            this.inputScript.Margin = new System.Windows.Forms.Padding(2);
-            this.inputScript.Name = "inputScript";
-            this.inputScript.Size = new System.Drawing.Size(505, 255);
-            this.inputScript.TabIndex = 1;
-            this.inputScript.Text = "";
             // 
             // btnExecute
             // 
@@ -121,43 +111,6 @@
             this.btnBtools.Text = "BTools";
             this.btnBtools.UseVisualStyleBackColor = true;
             this.btnBtools.Click += new System.EventHandler(this.BtnBtools_Click);
-            // 
-            // inputTPTo
-            // 
-            this.inputTPTo.Font = new System.Drawing.Font("Arial", 10.74627F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputTPTo.ForeColor = System.Drawing.Color.Gray;
-            this.inputTPTo.Location = new System.Drawing.Point(298, 348);
-            this.inputTPTo.Margin = new System.Windows.Forms.Padding(2);
-            this.inputTPTo.Name = "inputTPTo";
-            this.inputTPTo.Size = new System.Drawing.Size(118, 24);
-            this.inputTPTo.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 11.8209F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(231, 351);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Teleport";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // btnTPTo
-            // 
-            this.btnTPTo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTPTo.BackgroundImage")));
-            this.btnTPTo.Font = new System.Drawing.Font("Arial", 11.8209F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTPTo.ForeColor = System.Drawing.Color.White;
-            this.btnTPTo.Location = new System.Drawing.Point(419, 348);
-            this.btnTPTo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTPTo.Name = "btnTPTo";
-            this.btnTPTo.Size = new System.Drawing.Size(40, 24);
-            this.btnTPTo.TabIndex = 7;
-            this.btnTPTo.Text = "GO";
-            this.btnTPTo.UseVisualStyleBackColor = true;
-            this.btnTPTo.Click += new System.EventHandler(this.BtnTPTo_Click);
             // 
             // btnSpeed
             // 
@@ -202,14 +155,14 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 10;
-            this.label3.Text = "0.1 beta";
+            this.label3.Text = "0.2 beta";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(11, 60);
+            this.label4.Location = new System.Drawing.Point(11, 50);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 18);
@@ -358,12 +311,107 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // fastColoredTextBox1
+            // 
+            this.fastColoredTextBox1.AutoCompleteBrackets = true;
+            this.fastColoredTextBox1.AutoCompleteBracketsList = new char[] {
+        '(',
+        ')',
+        '{',
+        '}',
+        '[',
+        ']',
+        '\"',
+        '\"',
+        '\'',
+        '\''};
+            this.fastColoredTextBox1.AutoScrollMinSize = new System.Drawing.Size(27, 14);
+            this.fastColoredTextBox1.BackBrush = null;
+            this.fastColoredTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fastColoredTextBox1.BackgroundImage")));
+            this.fastColoredTextBox1.CharHeight = 14;
+            this.fastColoredTextBox1.CharWidth = 8;
+            this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
+            this.fastColoredTextBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.fastColoredTextBox1.IndentBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.fastColoredTextBox1.IsReplaceMode = false;
+            this.fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Lua;
+            this.fastColoredTextBox1.LineNumberColor = System.Drawing.Color.White;
+            this.fastColoredTextBox1.Location = new System.Drawing.Point(10, 71);
+            this.fastColoredTextBox1.Name = "fastColoredTextBox1";
+            this.fastColoredTextBox1.Paddings = new System.Windows.Forms.Padding(0);
+            this.fastColoredTextBox1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.fastColoredTextBox1.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("fastColoredTextBox1.ServiceColors")));
+            this.fastColoredTextBox1.ServiceLinesColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.fastColoredTextBox1.Size = new System.Drawing.Size(406, 265);
+            this.fastColoredTextBox1.TabIndex = 25;
+            this.fastColoredTextBox1.Zoom = 100;
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.Font = new System.Drawing.Font("Arial", 11.8209F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(251, 340);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(81, 41);
+            this.button10.TabIndex = 26;
+            this.button10.Text = "Clear";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.Font = new System.Drawing.Font("Arial", 11.8209F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(336, 340);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(81, 41);
+            this.button11.TabIndex = 27;
+            this.button11.Text = "Load";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.listBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(422, 71);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(107, 264);
+            this.listBox1.TabIndex = 28;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // button12
+            // 
+            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.Font = new System.Drawing.Font("Arial", 11.8209F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(422, 340);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(107, 41);
+            this.button12.TabIndex = 29;
+            this.button12.Text = "Refresh";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(815, 383);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.fastColoredTextBox1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button8);
@@ -379,13 +427,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtIsInjected);
             this.Controls.Add(this.btnSpeed);
-            this.Controls.Add(this.btnTPTo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.inputTPTo);
             this.Controls.Add(this.btnBtools);
             this.Controls.Add(this.btnInject);
             this.Controls.Add(this.btnExecute);
-            this.Controls.Add(this.inputScript);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -394,8 +438,10 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Project Hyploit";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,13 +450,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox inputScript;
         private System.Windows.Forms.Button btnExecute;
         private System.Windows.Forms.Button btnInject;
         private System.Windows.Forms.Button btnBtools;
-        private System.Windows.Forms.TextBox inputTPTo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnTPTo;
         private System.Windows.Forms.Button btnSpeed;
         private System.Windows.Forms.Label txtIsInjected;
         private System.Windows.Forms.Timer InjectedChecker;
@@ -427,6 +469,11 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button9;
+        private FastColoredTextBoxNS.FastColoredTextBox fastColoredTextBox1;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button12;
     }
 }
 

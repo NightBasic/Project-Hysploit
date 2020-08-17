@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using System.Net;
 using System.Diagnostics;
+using Hysploit;
+using System.IO;
 using Azuki;
 
 namespace Exploit_Template_with_WRDAPI
@@ -18,7 +20,7 @@ namespace Exploit_Template_with_WRDAPI
             InitializeComponent();
 
             WebClient webClient = new WebClient();
-            if (!webClient.DownloadString("https://pastebin.com/raw/pvhQTkda").Contains("0.1"))
+            if (!webClient.DownloadString("https://pastebin.com/raw/pvhQTkda").Contains("0.2"))
             {
                 if (MessageBox.Show("Looks like a new update is out, would you like to Download it?", "Project Hysploit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -42,7 +44,7 @@ namespace Exploit_Template_with_WRDAPI
 
         private void BtnExecute_Click(object sender, EventArgs e)
         {
-            string script = inputScript.Text;
+            string script = fastColoredTextBox1.Text;
             api.SendLuaScript(script);
         }
 
@@ -58,8 +60,7 @@ namespace Exploit_Template_with_WRDAPI
 
         private void BtnTPTo_Click(object sender, EventArgs e)
         {
-            string username = inputTPTo.Text;
-            api.SendCommand("teleport " + username);
+
         }
 
         private void CheckInjected()
@@ -157,6 +158,44 @@ namespace Exploit_Template_with_WRDAPI
         private void button9_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/NekoHynix/Project-Hysploit");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Text = "";
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opendialogfile = new OpenFileDialog();
+            opendialogfile.Filter = "Lua File (*.lua)|*.lua|Text File (*.txt)|*.txt";
+            opendialogfile.FilterIndex = 2;
+            opendialogfile.RestoreDirectory = true;
+            if (opendialogfile.ShowDialog() != DialogResult.OK)
+                return;
+            try
+            {
+                fastColoredTextBox1.Text = "";
+                System.IO.Stream stream;
+                if ((stream = opendialogfile.OpenFile()) == null)
+                    return;
+                using (stream)
+                    this.fastColoredTextBox1.Text = System.IO.File.ReadAllText(opendialogfile.FileName);
+            }
+            catch (Exception ex)
+            {
+                int num = (int)MessageBox.Show("An unexpected error has occured", "Project Hysploit", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) => fastColoredTextBox1.Text = File.ReadAllText($"./Scripts/{listBox1.SelectedItem}");
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();//Clear Items in the LuaScriptList
+            Functions.PopulateListBox(listBox1, "./Scripts", "*.txt");
+            Functions.PopulateListBox(listBox1, "./Scripts", "*.lua");
         }
     }
 }
