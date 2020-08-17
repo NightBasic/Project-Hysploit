@@ -197,5 +197,17 @@ namespace Exploit_Template_with_WRDAPI
             Functions.PopulateListBox(listBox1, "./Scripts", "*.txt");
             Functions.PopulateListBox(listBox1, "./Scripts", "*.lua");
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
+        }
     }
 }
