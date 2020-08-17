@@ -18,9 +18,9 @@ namespace Exploit_Template_with_WRDAPI
             InitializeComponent();
 
             WebClient webClient = new WebClient();
-            if (!webClient.DownloadString("https://pastebin.com/raw/NL8Y8Atf").Contains("0.0Test"))
+            if (!webClient.DownloadString("https://pastebin.com/raw/NL8Y8Atf").Contains("0.1beta"))
             {
-                if (MessageBox.Show("Looks like a new update is out, would you like to Download now?", "Project Azuki", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Looks like a new update is out, would you like to Download now?", "Project Hysploit beta test", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     System.Diagnostics.Process.Start("https://github.com/NekoHynix/Project/releases");
                 }
