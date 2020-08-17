@@ -20,7 +20,7 @@ namespace Exploit_Template_with_WRDAPI
             InitializeComponent();
 
             WebClient webClient = new WebClient();
-            if (!webClient.DownloadString("https://pastebin.com/raw/pvhQTkda").Contains("0.4"))
+            if (!webClient.DownloadString("https://pastebin.com/raw/pvhQTkda").Contains("0.4a"))
             {
                 if (MessageBox.Show("Looks like a new update is out, would you like to Download it?", "Project Hysploit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -46,21 +46,6 @@ namespace Exploit_Template_with_WRDAPI
         {
             string script = fastColoredTextBox1.Text;
             api.SendLuaScript(script);
-        }
-
-        private void BtnSpeed_Click(object sender, EventArgs e)
-        {
-            api.SendLuaScript("game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=100");
-        }
-
-        private void BtnBtools_Click(object sender, EventArgs e)
-        {
-            api.SendCommand("btools me");
-        }
-
-        private void BtnTPTo_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void CheckInjected()
@@ -93,71 +78,6 @@ namespace Exploit_Template_with_WRDAPI
         private void label5_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            api.SendCommand("kill me");
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            api.SendCommand("boxesp");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            api.SendCommand("nofloat me");
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            api.SendCommand("float me");
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://discord.gg/X2xcVsT");
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            api.SendCommand("boxespteamcheck");
-        }
-
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            Process.Start("https://pastebin.com/1WwBzGYv");
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://pastebin.com/raw/M3tVuYxs");
-        }
-
-        private void button8_Click_1(object sender, EventArgs e)
-        {
-            Process.Start("https://pastebin.com/M3tVuYxs");
-        }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            Process.Start("https://wearedevs.net");
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/NekoHynix/Project-Hysploit");
         }
 
         private void button10_Click(object sender, EventArgs e)

@@ -78,7 +78,7 @@
             this.btnInject.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInject.BackgroundImage")));
             this.btnInject.Font = new System.Drawing.Font("Arial", 11.8209F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInject.ForeColor = System.Drawing.Color.White;
-            this.btnInject.Location = new System.Drawing.Point(689, 338);
+            this.btnInject.Location = new System.Drawing.Point(689, 340);
             this.btnInject.Margin = new System.Windows.Forms.Padding(2);
             this.btnInject.Name = "btnInject";
             this.btnInject.Size = new System.Drawing.Size(118, 41);
@@ -114,9 +114,9 @@
             this.label3.Location = new System.Drawing.Point(293, 12);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 10;
-            this.label3.Text = "0.4 beta";
+            this.label3.Text = "0.4a beta";
             // 
             // label4
             // 
@@ -154,6 +154,7 @@
             this.fastColoredTextBox1.CommentPrefix = "--";
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.fastColoredTextBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.fastColoredTextBox1.IndentBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.fastColoredTextBox1.IsReplaceMode = false;
@@ -192,7 +193,7 @@
             this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
             this.button11.Font = new System.Drawing.Font("Arial", 11.8209F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(434, 341);
+            this.button11.Location = new System.Drawing.Point(436, 340);
             this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(95, 41);
@@ -217,7 +218,7 @@
             this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
             this.button12.Font = new System.Drawing.Font("Arial", 11.8209F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(535, 341);
+            this.button12.Location = new System.Drawing.Point(535, 340);
             this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(120, 41);
