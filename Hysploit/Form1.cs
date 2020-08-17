@@ -24,7 +24,7 @@ namespace Exploit_Template_with_WRDAPI
             {
                 if (MessageBox.Show("Looks like a new update is out, would you like to Download it?", "Project Hysploit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    System.Diagnostics.Process.Start("https://github.com/NekoHynix/Project-Hysploit");
+                    System.Diagnostics.Process.Start("https://github.com/NekoHynix/Project-Hysploit/releases");
                 }
                 else
                 {
