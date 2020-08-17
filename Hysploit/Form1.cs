@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Net;
 using System.Diagnostics;
-using WeAreDevs_API;
+using Azuki;
 
 namespace Exploit_Template_with_WRDAPI
 {
@@ -43,12 +43,12 @@ namespace Exploit_Template_with_WRDAPI
         private void BtnExecute_Click(object sender, EventArgs e)
         {
             string script = inputScript.Text;
-            api.SendLimitedLuaScript(script);
+            api.SendLuaScript(script);
         }
 
         private void BtnSpeed_Click(object sender, EventArgs e)
         {
-            api.SendLimitedLuaScript("game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=100");
+            api.SendLuaScript("game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=100");
         }
 
         private void BtnBtools_Click(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace Exploit_Template_with_WRDAPI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://wearedevs.net/");
+            System.Diagnostics.Process.Start("");
         }
 
         private void label2_Click(object sender, EventArgs e)
