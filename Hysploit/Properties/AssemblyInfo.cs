@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Project Hysploit")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A Open Source Roblox Executor")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Project Hysploit")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.01.1.0")]
-[assembly: AssemblyFileVersion("0.01.1.0")]
+[assembly: AssemblyVersion("0.03.1.0")]
+[assembly: AssemblyFileVersion("0.03.1.0")]
