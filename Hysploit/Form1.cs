@@ -33,7 +33,7 @@ namespace Exploit_Template_with_WRDAPI
             }
             else
             {
-                MessageBox.Show("You are up to date :)", "Project Azuki");
+                MessageBox.Show("You are up to date :)", "Project Hysploit");
             }
         }
 
