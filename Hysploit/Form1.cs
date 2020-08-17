@@ -20,7 +20,7 @@ namespace Exploit_Template_with_WRDAPI
             WebClient webClient = new WebClient();
             if (!webClient.DownloadString("https://pastebin.com/raw/pvhQTkda").Contains("0.1"))
             {
-                if (MessageBox.Show("Looks like a new update is out, would you like to Download now?", "Project Hysploit beta test", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Looks like a new update is out, would you like to Download it?", "Project Hysploit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     System.Diagnostics.Process.Start("https://github.com/NekoHynix/Project/releases");
                 }
@@ -116,7 +116,7 @@ namespace Exploit_Template_with_WRDAPI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("");
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -126,7 +126,7 @@ namespace Exploit_Template_with_WRDAPI
 
         private void button6_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://discord.gg/X2xcVsT");
+            Process.Start("https://discord.gg/X2xcVsT");
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -136,17 +136,22 @@ namespace Exploit_Template_with_WRDAPI
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://pastebin.com/1WwBzGYv");
+            Process.Start("https://pastebin.com/1WwBzGYv");
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://pastebin.com/raw/M3tVuYxs");
+            Process.Start("https://pastebin.com/raw/M3tVuYxs");
         }
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://pastebin.com/M3tVuYxs");
+            Process.Start("https://pastebin.com/M3tVuYxs");
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Process.Start("https://wearedevs.net");
         }
     }
 }
