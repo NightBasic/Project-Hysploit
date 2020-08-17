@@ -10,7 +10,7 @@ namespace Exploit_Template_with_WRDAPI
 {
     public partial class Form1 : Form
     {
-        readonly ExploitAPI api = new ExploitAPI();
+        ExploitAPI api = new ExploitAPI();
 
 
 
@@ -20,7 +20,7 @@ namespace Exploit_Template_with_WRDAPI
             InitializeComponent();
 
             WebClient webClient = new WebClient();
-            if (!webClient.DownloadString("https://pastebin.com/raw/pvhQTkda").Contains("0.3"))
+            if (!webClient.DownloadString("https://pastebin.com/raw/pvhQTkda").Contains("0.4"))
             {
                 if (MessageBox.Show("Looks like a new update is out, would you like to Download it?", "Project Hysploit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
