@@ -64,7 +64,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 17);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Beta Release 0.5";
+            this.label3.Text = "Beta Release 0.6";
             // 
             // label4
             // 

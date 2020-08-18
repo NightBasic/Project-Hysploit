@@ -20,7 +20,7 @@ namespace Exploit_Template_with_WRDAPI
             InitializeComponent();
 
             WebClient webClient = new WebClient();
-            if (!webClient.DownloadString("https://pastebin.com/raw/pvhQTkda").Contains("0.5"))
+            if (!webClient.DownloadString("https://pastebin.com/raw/pvhQTkda").Contains("0.6"))
             {
                 if (MessageBox.Show("Looks like a new update is out, would you like to Download it?", "Project Hysploit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
