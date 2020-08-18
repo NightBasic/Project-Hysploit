@@ -50,5 +50,20 @@ namespace Hysploit
         {
             api.SendCommand("nofloat me");
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (System.Diagnostics.Process.GetProcessesByName("RobloxPlayerBeta").Length > 0)
+            {
+                foreach (var a in System.Diagnostics.Process.GetProcessesByName("RobloxPlayerBeta"))
+                {
+                    a.Kill();
+                }
+            }
+            else;
+            {
+                MessageBox.Show("Done!", "Project Hysploit");
+            }
+        }
     }
 }
