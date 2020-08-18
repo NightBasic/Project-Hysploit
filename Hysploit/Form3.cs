@@ -28,7 +28,7 @@ namespace Hysploit
 
         private void button2_Click(object sender, EventArgs e)
         {
-            api.SendLimitedLuaScript("game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=100");
+            api.SendLuaScript("game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=100");
         }
 
         private void button3_Click(object sender, EventArgs e)
