@@ -155,6 +155,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form3";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Project Hysploit";
             this.ResumeLayout(false);

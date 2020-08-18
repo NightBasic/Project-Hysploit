@@ -129,5 +129,11 @@ namespace Exploit_Template_with_WRDAPI
             Form3 f3 = new Form3();
             f3.ShowDialog();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.ShowDialog();
+        }
     }
 }
