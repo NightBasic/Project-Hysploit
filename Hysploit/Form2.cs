@@ -34,5 +34,10 @@ namespace Hysploit
         {
             Process.Start("https://wearedevs.net/");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://pastebin.com/1WwBzGYv");
+        }
     }
 }
