@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Exploit_Template_with_WRDAPI
+namespace Hysploit
 {
     static class Program
     {

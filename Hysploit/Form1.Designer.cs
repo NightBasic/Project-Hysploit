@@ -1,4 +1,4 @@
-﻿namespace Exploit_Template_with_WRDAPI
+﻿namespace Hysploit
 {
     partial class Form1
     {
