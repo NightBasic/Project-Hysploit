@@ -25,11 +25,6 @@ namespace Hysploit
             Process.Start("https://github.com/NekoHynix/Project-Hysploit");
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://pastebin.com/raw/M3tVuYxs");
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Process.Start("https://discord.gg/X2xcVsT");
