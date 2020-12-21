@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.Label();
@@ -45,8 +44,12 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.legacyUIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gunaGradientPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaGradientPanel1
@@ -54,7 +57,6 @@
             this.gunaGradientPanel1.BackColor = System.Drawing.Color.Black;
             this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaGradientPanel1.Controls.Add(this.label2);
             this.gunaGradientPanel1.Controls.Add(this.button2);
             this.gunaGradientPanel1.Controls.Add(this.button1);
             this.gunaGradientPanel1.Controls.Add(this.name);
@@ -69,19 +71,6 @@
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             this.gunaGradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gunaGradientPanel1_MouseMove);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(20, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 16);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "?";
-            this.label2.Click += new System.EventHandler(this.labe2_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
@@ -89,7 +78,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(752, 2);
+            this.button2.Location = new System.Drawing.Point(752, 1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(27, 23);
             this.button2.TabIndex = 2;
@@ -104,7 +93,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(783, 2);
+            this.button1.Location = new System.Drawing.Point(783, 1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(27, 23);
             this.button1.TabIndex = 1;
@@ -122,6 +111,7 @@
             this.name.Size = new System.Drawing.Size(61, 18);
             this.name.TabIndex = 0;
             this.name.Text = "Hysploit";
+            this.name.MouseMove += new System.Windows.Forms.MouseEventHandler(this.name_MouseMove);
             // 
             // inject
             // 
@@ -177,7 +167,8 @@
             // 
             // loadToolStripMenuItem
             // 
-            this.loadToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.loadToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.loadToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.loadToolStripMenuItem.Text = "Load";
@@ -185,7 +176,8 @@
             // 
             // executeToolStripMenuItem
             // 
-            this.executeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.executeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.executeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.executeToolStripMenuItem.Name = "executeToolStripMenuItem";
             this.executeToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.executeToolStripMenuItem.Text = "Execute";
@@ -193,7 +185,8 @@
             // 
             // refreshToolStripMenuItem
             // 
-            this.refreshToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.refreshToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.refreshToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
             this.refreshToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
@@ -237,12 +230,39 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.legacyUIToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(126, 48);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.aboutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // legacyUIToolStripMenuItem
+            // 
+            this.legacyUIToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.legacyUIToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.legacyUIToolStripMenuItem.Name = "legacyUIToolStripMenuItem";
+            this.legacyUIToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.legacyUIToolStripMenuItem.Text = "Legacy UI";
+            this.legacyUIToolStripMenuItem.Click += new System.EventHandler(this.legacyUIToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(800, 336);
+            this.ContextMenuStrip = this.contextMenuStrip2;
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.webBrowser1);
@@ -260,6 +280,7 @@
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -270,7 +291,6 @@
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button inject;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox1;
@@ -281,5 +301,8 @@
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem legacyUIToolStripMenuItem;
     }
 }

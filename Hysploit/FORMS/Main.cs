@@ -56,7 +56,7 @@ namespace Hysploit
 
             client.SetPresence(new RichPresence()
             {
-                Details = "1.0.0",
+                Details = "1.0.1",
                 State = "clapping kids",
                 Assets = new Assets()
                 {
@@ -143,7 +143,7 @@ namespace Hysploit
         }
 
         WebClient wc = new WebClient();
-        private string defPath = Application.StartupPath + "//Monaco//";
+        private string defPath = Application.StartupPath + "//Bin//";
 
         private void addIntel(string label, string kind, string detail, string insertText)
         {
@@ -214,6 +214,7 @@ namespace Hysploit
 
             Directory.GetCurrentDirectory();
             Directory.CreateDirectory("Scripts");
+            File.Delete("exploit-main.dll");
             api.IsUpdated();
             listBox1.Items.Clear();//Clear Items in the LuaScriptList
             Functions.PopulateListBox(listBox1, "./Scripts", "*.txt");
@@ -235,7 +236,7 @@ namespace Hysploit
             catch (Exception)
             {
             }
-            webBrowser1.Url = new Uri(string.Format("file:///{0}/Monaco/Monaco.html", Directory.GetCurrentDirectory()));
+            webBrowser1.Url = new Uri(string.Format("file:///{0}/Bin/Monaco.html", Directory.GetCurrentDirectory()));
             await Task.Delay(500);
             webBrowser1.Document.InvokeScript("SetTheme", new string[]
             {
@@ -288,10 +289,25 @@ namespace Hysploit
             }
         }
 
-        private void labe2_Click(object sender, EventArgs e)
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             about f4 = new about();
             f4.ShowDialog();
+        }
+
+        private void legacyUIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
+        }
+
+        private void name_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }
