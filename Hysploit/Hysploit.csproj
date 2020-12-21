@@ -59,15 +59,8 @@
     <Reference Include="Azuki">
       <HintPath>..\..\..\build-result\Azuki Rewritten\Azuki.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>.\Bunifu_UI_v1.5.3.dll</HintPath>
-    </Reference>
     <Reference Include="DiscordRPC, Version=1.0.169.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DiscordRichPresence.1.0.169\lib\net35\DiscordRPC.dll</HintPath>
-    </Reference>
-    <Reference Include="FastColoredTextBox, Version=2.16.24.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\FastColoredTextBox.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
       <HintPath>.\Guna.UI.dll</HintPath>
@@ -88,37 +81,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Changelog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Changelog.Designer.cs">
+      <DependentUpon>Changelog.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\About.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMS\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="OLD FORMS\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD FORMS\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OLD FORMS\Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD FORMS\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OLD FORMS\Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD FORMS\Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Functions.cs" />
-    <Compile Include="OLD FORMS\Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD FORMS\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="FORMS\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,24 +102,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Changelog.resx">
+      <DependentUpon>Changelog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD FORMS\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD FORMS\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD FORMS\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD FORMS\Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

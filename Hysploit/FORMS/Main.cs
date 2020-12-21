@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -295,12 +296,6 @@ namespace Hysploit
             f4.ShowDialog();
         }
 
-        private void legacyUIToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form1 f1 = new Form1();
-            f1.ShowDialog();
-        }
-
         private void name_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -308,6 +303,28 @@ namespace Hysploit
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void runBootstrapperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string var = Directory.GetCurrentDirectory();
+            Process.Start("Bootstrapper.exe");
+        }
+
+        private void joinDiscordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.gg/Cva6qMFZ7W");
+        }
+
+        private void changeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Changelog cl = new Changelog();
+            cl.ShowDialog();
+        }
+
+        private void gitHubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/NightBasic/Project-Hysploit");
         }
     }
 }

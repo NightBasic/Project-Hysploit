@@ -46,7 +46,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.legacyUIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.runBootstrapperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.joinDiscordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gitHubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gunaGradientPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -234,27 +237,59 @@
             // 
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
-            this.legacyUIToolStripMenuItem});
+            this.changeToolStripMenuItem,
+            this.runBootstrapperToolStripMenuItem,
+            this.joinDiscordToolStripMenuItem,
+            this.gitHubToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(126, 48);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(167, 114);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.aboutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // legacyUIToolStripMenuItem
+            // runBootstrapperToolStripMenuItem
             // 
-            this.legacyUIToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.legacyUIToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.legacyUIToolStripMenuItem.Name = "legacyUIToolStripMenuItem";
-            this.legacyUIToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.legacyUIToolStripMenuItem.Text = "Legacy UI";
-            this.legacyUIToolStripMenuItem.Click += new System.EventHandler(this.legacyUIToolStripMenuItem_Click);
+            this.runBootstrapperToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.runBootstrapperToolStripMenuItem.Enabled = false;
+            this.runBootstrapperToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.runBootstrapperToolStripMenuItem.Name = "runBootstrapperToolStripMenuItem";
+            this.runBootstrapperToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.runBootstrapperToolStripMenuItem.Text = "Run Bootstrapper";
+            this.runBootstrapperToolStripMenuItem.Click += new System.EventHandler(this.runBootstrapperToolStripMenuItem_Click);
+            // 
+            // joinDiscordToolStripMenuItem
+            // 
+            this.joinDiscordToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.joinDiscordToolStripMenuItem.Enabled = false;
+            this.joinDiscordToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.joinDiscordToolStripMenuItem.Name = "joinDiscordToolStripMenuItem";
+            this.joinDiscordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.joinDiscordToolStripMenuItem.Text = "Join Discord";
+            this.joinDiscordToolStripMenuItem.Click += new System.EventHandler(this.joinDiscordToolStripMenuItem_Click);
+            // 
+            // changeToolStripMenuItem
+            // 
+            this.changeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.changeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.changeToolStripMenuItem.Name = "changeToolStripMenuItem";
+            this.changeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changeToolStripMenuItem.Text = "ChangeLog";
+            this.changeToolStripMenuItem.Click += new System.EventHandler(this.changeToolStripMenuItem_Click);
+            // 
+            // gitHubToolStripMenuItem
+            // 
+            this.gitHubToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.gitHubToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.gitHubToolStripMenuItem.Name = "gitHubToolStripMenuItem";
+            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gitHubToolStripMenuItem.Text = "GitHub";
+            this.gitHubToolStripMenuItem.Click += new System.EventHandler(this.gitHubToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -303,6 +338,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem legacyUIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem runBootstrapperToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem joinDiscordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gitHubToolStripMenuItem;
     }
 }
