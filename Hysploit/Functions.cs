@@ -10,6 +10,15 @@ namespace Hysploit
 {
     class Functions
     {
+        public static OpenFileDialog openfiledialog = new OpenFileDialog
+        {
+            Filter = "Lua Script Txt (*.txt)|*.txt|All files (*.*)|*.*",
+            FilterIndex = 1,
+            RestoreDirectory = true,
+            Title = "Hysploit"
+        };
+
+
         public static void PopulateListBox(ListBox lsb, string Folder, string FileType)
         {
             DirectoryInfo dinfo = new DirectoryInfo(Folder);
@@ -19,5 +28,7 @@ namespace Hysploit
                 lsb.Items.Add(file.Name);
             }
         }
+
+
     }
 }

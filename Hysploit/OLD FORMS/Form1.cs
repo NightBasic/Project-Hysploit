@@ -6,7 +6,7 @@ using Hysploit;
 using System.IO;
 using Azuki;
 
-namespace Exploit_Template_with_WRDAPI
+namespace Hysploit
 {
     public partial class Form1 : Form
     {
